@@ -1,5 +1,7 @@
 ## Deploy Rancher HA in OpenNebula with Terraform and RKE
 
+<img src="images/paas-one.svg">
+
 ### Installation 
 
 ####  Install Terraform 
@@ -88,7 +90,7 @@ In a terminal, go into the folder where you created main.tf, and run the `terraf
 <img src="images/terraform-apply.png">
 <img src="images/one.png">
 
-### Required Tools
+###  Required Tools
 
 The following CLI tools are required for this install. Please make sure these tools are installed and available:
 
@@ -120,7 +122,7 @@ Helm installs the `tiller` service on your cluster to manage charts
 
 	$ helm install stable/cert-manager --name cert-manager --namespace kube-system
 
-#### Install Rancher Generated Certificates
+####  Install Rancher Generated Certificates
 
 	$ helm install rancher-stable/rancher --name rancher --namespace cattle-system --set hostname=rancher.my.org
 
