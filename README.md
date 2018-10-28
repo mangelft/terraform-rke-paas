@@ -1,6 +1,6 @@
 ## Deploy Rancher HA in OpenNebula with Terraform and RKE
 
-<img src="images/paas-one.svg">
+<img src="images/paas-one.png">
 
 ### Installation 
 
