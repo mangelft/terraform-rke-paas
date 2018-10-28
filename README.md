@@ -14,6 +14,7 @@ After downloading Terraform, unzip the package
 	$ sudo unzip terraform_0.11.10_linux_amd64.zip -d /bin/terraform
 
 After installing Terraform, verify the installation worked by opening a new terminal session and checking that terraform is available. 
+	
 	$ export PATH=$PATH:/bin/terraform
 	$ terraform --version
 
@@ -82,7 +83,10 @@ First, initialize Terraform for your project. This will read your configuration 
 
 	$ terraform init
 
-In a terminal, go into the folder where you created main.tf, and run the `terraform plan` command. The plan command lets you see what Terraform will do before actually doing it. To actually create the instance, run the `terraform apply` command.
+In a terminal, go into the folder where you created main.tf, and run the `terraform plan` command. The plan command lets you see what Terraform will do before actually doing it. To actually create the instance, run the `terraform apply` command:
+
+<img src="images/terraform-apply.png">
+<img src="images/one.png">
 
 ### Required Tools
 
