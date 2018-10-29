@@ -6,9 +6,7 @@
 
 ### Installation 
 
-<aside class="warning">
-Important: RKE add-on install is only supported up to Rancher v2.0.8.
-</aside>
+#### <i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Important: RKE add-on install is only supported up to Rancher v2.0.8.
 
 ####  Install Terraform 
 
