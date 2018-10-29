@@ -1,12 +1,14 @@
 ## Deploy Rancher HA in OpenNebula with Terraform and RKE
 
+Terraform files for deploying a Rancher HA cluster in OpenNebula
+
 ### Architecture
 
 <img src="images/paas-one.png">
 
 ### Installation 
 
-#### <i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Important: RKE add-on install is only supported up to Rancher v2.0.8.
+> **Important:** RKE add-on install is only supported up to Rancher v2.0.8.
 
 ####  Install Terraform 
 
@@ -83,52 +85,34 @@ providers {
 
 This repository provide a `TF file` to install Rancher in a high-availability configuration. The goal is easily install a Rancher on machines running CentOS 7.
 
+Clone this repo:
+
 	$ git clone https://github.com/mangelft/terraform-rke-paas.git
 
-First, initialize Terraform for your project. This will read your configuration files and install the plugins for your provider:
+### Create infrastructure
+
+First we have to initialize terraform simply with:
 
 	$ terraform init
 
-In a terminal, go into the folder where you created main.tf, and run the `terraform plan` command. The plan command lets you see what Terraform will do before actually doing it. To actually create the instance, run the `terraform apply` command:
+This will read your configuration files and install the plugins for your provider.
+
+We let terraform create a plan, which we can review:
+
+	$ terraform plan
+
+The plan command lets you see what Terraform will do before actually doing it.
+
+Now we execute: 
+
+	$ terraform apply
 
 <img src="images/terraform-apply.png">
 <img src="images/one.png">
 
-###  Required Tools
+That’s it you should have a functional Rancher server. Point a browser at the hostname: https://rancher.my.org.
 
-The following CLI tools are required for this install. Please make sure these tools are installed and available:
-
-* kubectl - Kubernetes command-line tool.
-* helm - Package management for Kubernetes.
-
-#### Install required tools (Ubuntu)
-	$ sudo apt install snap
-	$ sudo snap install kubectl --classic
-	$ sudo snap install helm --classic 
-
-#### Install Tiller on the Cluster
-Helm installs the `tiller` service on your cluster to manage charts
-
-	$ kubectl -n kube-system create serviceaccount tiller
-	$ kubectl create clusterrolebinding tiller  --clusterrole cluster-admin --serviceaccount=kube-system:tiller
-	$ helm init --service-account tiller
-
-#### Test your Tiller installation
-
-	$ kubectl -n kube-system  rollout status deploy/tiller-deploy
-	$ helm version
-
-#### Add the Helm Chart Repository
-
-	$ helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
-
-#### Install cert-manager
-
-	$ helm install stable/cert-manager --name cert-manager --namespace kube-system
-
-####  Install Rancher Generated Certificates
-
-	$ helm install rancher-stable/rancher --name rancher --namespace cattle-system --set hostname=rancher.my.org
+<img src="images/rancher-dashboard.png">
 
 ## Author
 
