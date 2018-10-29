@@ -1,8 +1,14 @@
 ## Deploy Rancher HA in OpenNebula with Terraform and RKE
 
+### Architecture
+
 <img src="images/paas-one.png">
 
 ### Installation 
+
+<aside class="warning">
+Important: RKE add-on install is only supported up to Rancher v2.0.8.
+</aside>
 
 ####  Install Terraform 
 
