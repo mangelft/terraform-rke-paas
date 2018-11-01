@@ -110,6 +110,14 @@ Now we execute:
 <img src="images/terraform-apply.png">
 <img src="images/one.png">
 
+Kubectl is the CLI tool for interacting with the Kubernetes cluster. Please make sure these tools are installed and available.
+
+To make sure it works, run a simple `get nodes` command.
+
+	$ kubectl get nodes
+
+<img src="images/kubectl.png">
+
 That’s it you should have a functional Rancher server. Point a browser at the hostname: https://rancher.my.org.
 
 <img src="images/rancher-dashboard.png">
