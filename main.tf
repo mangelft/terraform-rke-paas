@@ -22,8 +22,8 @@ resource "opennebula_vm" "k8s-node" {
   vcpu = "1"
   permissions = "600"
 
-  # This will create 1 instances
-  count = 1
+  # This will create 2 instances
+  count = "${var.master_nodes}"
 
   connection {
     host = "${self.ip}"
@@ -42,7 +42,7 @@ resource "opennebula_vm" "k8s-node" {
 }
 
 data rke_node_parameter "nodes" {
-  count = 1
+  count = "${var.master_nodes}"
 
   address = "${element(opennebula_vm.k8s-node.*.ip, count.index)}"
   user    = "ubuntu"
