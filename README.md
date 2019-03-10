@@ -30,15 +30,21 @@ You need to install go first: https://golang.org/doc/install
 
 Install Prerequisites
 
+##### Ubuntu
+
 	$ sudo apt install bzr
+
+##### CentOS/RHEL 7
+
+	$ sudo yum install -y bzr
 
 Use the `wget` command and the link from Go to download the tarball:
 
-	$ wget https://dl.google.com/go/go1.10.linux-amd64.tar.gz
+	$ curl -O https://dl.google.com/go/go1.12.linux-amd64.tar.gz
 
 The installation of Go consists of extracting the tarball into the `/usr/local` 
 
-	$ sudo tar -C /usr/local -xvzf  go1.10.linux-amd64.tar.gz 
+	$ sudo tar -C /usr/local -xvzf  go1.12.linux-amd64.tar.gz 
 
 We will call our workspace directory projects, but you can name it anything you would like. The `-p` flag for the `mkdir` command will create the appropriate directory tree
 
