@@ -79,6 +79,7 @@ For RKE provider, download the binary and copy in the same folder:
 	$ sudo unzip terraform-provider-rke_0.9.0_linux-amd64.zip -d /usr/local/bin/terraform-provider-rke
 
 ```
+cat <<EOF >> ~/.terraformrc
 providers {
   opennebula = "/usr/local/bin/terraform-provider-opennebula"
 }
@@ -86,6 +87,7 @@ providers {
 providers {
   rke = "/usr/local/bin/terraform-provider-rke"
 }
+EOF
 ```
 
 ## Install Rancher
