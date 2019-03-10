@@ -53,11 +53,14 @@ We will call our workspace directory projects, but you can name it anything you 
 To execute Go like any other command, we need to append its install location to the $PATH variable.
 
 	$ export PATH=$PATH:/usr/local/go/bin
+	$ echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 
 Additionally, define the GOPATH and GOBIN Go environment variables:
 	
-	$ export GOBIN="$HOME/projects/bin"
-	$ export GOPATH="$HOME/projects/src"
+	$ export GOBIN=$HOME/projects/bin
+	$ export GOPATH=$HOME/projects/src
+	$ echo 'export GOBIN=$HOME/projects/bin' >> ~/.bashrc
+	$ echo 'export GOPATH=$HOME/projects/src' >> ~/.bashrc
 
 After go is installed and set up, just type:
 
