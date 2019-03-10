@@ -14,16 +14,14 @@ Terraform files for deploying a Rancher HA cluster in OpenNebula
 
 To install Terraform, find the appropriate package for your system and download it
 
-	$ curl -O https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip
+	$ curl -O https://releases.hashicorp.com/terraform/0.11.12/terraform_0.11.12_linux_amd64.zip
 
 After downloading Terraform, unzip the package
 
-	$ sudo mkdir /bin/terraform
-	$ sudo unzip terraform_0.11.10_linux_amd64.zip -d /bin/terraform
+	$ sudo unzip terraform_0.11.12_linux_amd64.zip -d /usr/local/bin
 
 After installing Terraform, verify the installation worked by opening a new terminal session and checking that terraform is available. 
 	
-	$ export PATH=$PATH:/bin/terraform
 	$ terraform --version
 
 ####  Add Terraform providers for Opennebula and RKE
