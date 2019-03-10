@@ -75,8 +75,8 @@ Copy your **terraform-provider-opennebula** binary in a folder, like `/usr/local
 
 For RKE provider, download the binary and copy in the same folder:
 
-	$ wget https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/0.5.0/terraform-provider-rke_0.5.0_linux-amd64.zip 
-	$ sudo unzip terraform-provider-rke_0.5.0_linux-amd64.zip -d /usr/local/bin/terraform-provider-rke
+	$ wget https://github.com/yamamoto-febc/terraform-provider-rke/releases/download/0.9.0/terraform-provider-rke_0.9.0_linux-amd64.zip 
+	$ sudo unzip terraform-provider-rke_0.9.0_linux-amd64.zip -d /usr/local/bin/terraform-provider-rke
 
 ```
 providers {
